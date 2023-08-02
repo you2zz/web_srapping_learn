@@ -1,0 +1,243 @@
+[
+    {
+        "header": "Заметка про скрипты автозаполнения шаблонов файлов 1С: Документооборот 3.0",
+        "link": "https://habr.com/ru/articles/751986/",
+        "publication_time": "2023-08-02T10:11:50.000Z",
+        "article_text": "Поделюсь (точнее пиш"
+    },
+    {
+        "header": "pgmig — история разработки инструмента управления изменениями в БД или чего нам не хватило в Liquibase и Flyway",
+        "link": "https://habr.com/ru/companies/rostelecom/articles/745352/",
+        "publication_time": "2023-08-02T10:11:39.000Z",
+        "article_text": "ВведениеВсем привет!"
+    },
+    {
+        "header": "Работа со скрипичной диаграммой (Violin Plot) в Seaborn",
+        "link": "https://habr.com/ru/articles/751898/",
+        "publication_time": "2023-08-02T10:07:13.000Z",
+        "article_text": "Скрипичные диаграммы"
+    },
+    {
+        "header": "MiVOLO: новая State-of-the-Art нейросеть для определения пола и возраста по фотографии",
+        "link": "https://habr.com/ru/companies/sberdevices/articles/749810/",
+        "publication_time": "2023-08-02T10:05:09.000Z",
+        "article_text": "Привет, Хабр!Хочу ра"
+    },
+    {
+        "header": "Оптимизация анимации на Compose: крутим лоадеры, ищем неочевидные функции",
+        "link": "https://habr.com/ru/companies/redmadrobot/articles/751976/",
+        "publication_time": "2023-08-02T09:41:55.000Z",
+        "article_text": "Android-разработчик "
+    },
+    {
+        "header": "PostgreSQL: обходим подводные камни при миграции",
+        "link": "https://habr.com/ru/companies/sberbank/articles/751938/",
+        "publication_time": "2023-08-02T09:39:50.000Z",
+        "article_text": "Привет! Меня зовут А"
+    },
+    {
+        "header": "Тед Лассо — идеальная модель поведения менеджера по тестированию? Или же плохой пример для подражания?",
+        "link": "https://habr.com/ru/companies/inpglobal/articles/751974/",
+        "publication_time": "2023-08-02T09:39:08.000Z",
+        "article_text": "Постер с сайта https"
+    },
+    {
+        "header": "Чат-боты на все случаи жизни. 7 инструкций по созданию мини-приложений в Telegram",
+        "link": "https://habr.com/ru/companies/selectel/articles/751930/",
+        "publication_time": "2023-08-02T09:29:47.000Z",
+        "article_text": "\r\nTelegram-боты — хо"
+    },
+    {
+        "header": "Nexus RM — OSS — Tips",
+        "link": "https://habr.com/ru/articles/751970/",
+        "publication_time": "2023-08-02T09:21:58.000Z",
+        "article_text": "Проблема: В настройк"
+    },
+    {
+        "header": "Проверка продуктовых гипотез и поиск первых B2B клиентов",
+        "link": "https://habr.com/ru/articles/751964/",
+        "publication_time": "2023-08-02T09:08:45.000Z",
+        "article_text": "Вы только что разраб"
+    },
+    {
+        "header": "Как маленькая нейроязыковая модель в Клавиатуре победила серверные подсказки",
+        "link": "https://habr.com/ru/companies/yandex/articles/751598/",
+        "publication_time": "2023-08-02T09:02:00.000Z",
+        "article_text": "Основная задача любо"
+    },
+    {
+        "header": "Как прибыль «АльфаСтрахования» выросла на 714% через CRM-маркетинг за 4 года",
+        "link": "https://habr.com/ru/companies/altcraft/articles/751836/",
+        "publication_time": "2023-08-02T09:00:03.000Z",
+        "article_text": "Группа «АльфаСтрахов"
+    },
+    {
+        "header": "OpenSSH против SSH",
+        "link": "https://habr.com/ru/companies/ruvds/articles/751756/",
+        "publication_time": "2023-08-02T09:00:01.000Z",
+        "article_text": "\nРис. 1. Разные реал"
+    },
+    {
+        "header": "Учим английский с умом: мотивация и дисциплина",
+        "link": "https://habr.com/ru/articles/751882/",
+        "publication_time": "2023-08-02T08:59:22.000Z",
+        "article_text": "Добрый день, Хабр!Я "
+    },
+    {
+        "header": "Использование PostgreSQL Enum в SQLAlchemy. И проблемы с ним",
+        "link": "https://habr.com/ru/articles/751140/",
+        "publication_time": "2023-08-02T08:30:01.000Z",
+        "article_text": "Начнем с начала. В p"
+    },
+    {
+        "header": "Автостратегии Яндекс Директа в 2023 году: как выбрать, запустить и управлять",
+        "link": "https://habr.com/ru/articles/751940/",
+        "publication_time": "2023-08-02T08:06:41.000Z",
+        "article_text": "Рассказываем, какие "
+    },
+    {
+        "header": "Swipe sidebar — отдельный Typescript сервис и обработка touch событий на Vue",
+        "link": "https://habr.com/ru/articles/751618/",
+        "publication_time": "2023-08-02T08:04:41.000Z",
+        "article_text": "Приветствую, друзья "
+    },
+    {
+        "header": "Делегировать нельзя участвовать. Где запятая? Должен ли продакт участвовать в UX-ах?",
+        "link": "https://habr.com/ru/articles/751936/",
+        "publication_time": "2023-08-02T08:02:46.000Z",
+        "article_text": "Продакт, которого по"
+    },
+    {
+        "header": "Переделываем настенное зеркало во многофункциональное устройство",
+        "link": "https://habr.com/ru/companies/timeweb/articles/751606/",
+        "publication_time": "2023-08-02T08:01:01.000Z",
+        "article_text": "Сегодня я расскажу, "
+    },
+    {
+        "header": "Дотошность и толерантность к хаосу: как понять, что у вас есть склонность к программированию",
+        "link": "https://habr.com/ru/companies/yandex_praktikum/articles/751708/",
+        "publication_time": "2023-08-02T08:00:01.000Z",
+        "article_text": "Привет! Меня зовут Б"
+    }
+][
+    {
+        "header": "Заметка про скрипты автозаполнения шаблонов файлов 1С: Документооборот 3.0",
+        "link": "https://habr.com/ru/articles/751986/",
+        "publication_time": "2023-08-02T10:11:50.000Z",
+        "article_text": "Поделюсь (точнее пиш"
+    },
+    {
+        "header": "pgmig — история разработки инструмента управления изменениями в БД или чего нам не хватило в Liquibase и Flyway",
+        "link": "https://habr.com/ru/companies/rostelecom/articles/745352/",
+        "publication_time": "2023-08-02T10:11:39.000Z",
+        "article_text": "ВведениеВсем привет!"
+    },
+    {
+        "header": "Работа со скрипичной диаграммой (Violin Plot) в Seaborn",
+        "link": "https://habr.com/ru/articles/751898/",
+        "publication_time": "2023-08-02T10:07:13.000Z",
+        "article_text": "Скрипичные диаграммы"
+    },
+    {
+        "header": "MiVOLO: новая State-of-the-Art нейросеть для определения пола и возраста по фотографии",
+        "link": "https://habr.com/ru/companies/sberdevices/articles/749810/",
+        "publication_time": "2023-08-02T10:05:09.000Z",
+        "article_text": "Привет, Хабр!Хочу ра"
+    },
+    {
+        "header": "Оптимизация анимации на Compose: крутим лоадеры, ищем неочевидные функции",
+        "link": "https://habr.com/ru/companies/redmadrobot/articles/751976/",
+        "publication_time": "2023-08-02T09:41:55.000Z",
+        "article_text": "Android-разработчик "
+    },
+    {
+        "header": "PostgreSQL: обходим подводные камни при миграции",
+        "link": "https://habr.com/ru/companies/sberbank/articles/751938/",
+        "publication_time": "2023-08-02T09:39:50.000Z",
+        "article_text": "Привет! Меня зовут А"
+    },
+    {
+        "header": "Тед Лассо — идеальная модель поведения менеджера по тестированию? Или же плохой пример для подражания?",
+        "link": "https://habr.com/ru/companies/inpglobal/articles/751974/",
+        "publication_time": "2023-08-02T09:39:08.000Z",
+        "article_text": "Постер с сайта https"
+    },
+    {
+        "header": "Чат-боты на все случаи жизни. 7 инструкций по созданию мини-приложений в Telegram",
+        "link": "https://habr.com/ru/companies/selectel/articles/751930/",
+        "publication_time": "2023-08-02T09:29:47.000Z",
+        "article_text": "\r\nTelegram-боты — хо"
+    },
+    {
+        "header": "Nexus RM — OSS — Tips",
+        "link": "https://habr.com/ru/articles/751970/",
+        "publication_time": "2023-08-02T09:21:58.000Z",
+        "article_text": "Проблема: В настройк"
+    },
+    {
+        "header": "Проверка продуктовых гипотез и поиск первых B2B клиентов",
+        "link": "https://habr.com/ru/articles/751964/",
+        "publication_time": "2023-08-02T09:08:45.000Z",
+        "article_text": "Вы только что разраб"
+    },
+    {
+        "header": "Как маленькая нейроязыковая модель в Клавиатуре победила серверные подсказки",
+        "link": "https://habr.com/ru/companies/yandex/articles/751598/",
+        "publication_time": "2023-08-02T09:02:00.000Z",
+        "article_text": "Основная задача любо"
+    },
+    {
+        "header": "Как прибыль «АльфаСтрахования» выросла на 714% через CRM-маркетинг за 4 года",
+        "link": "https://habr.com/ru/companies/altcraft/articles/751836/",
+        "publication_time": "2023-08-02T09:00:03.000Z",
+        "article_text": "Группа «АльфаСтрахов"
+    },
+    {
+        "header": "OpenSSH против SSH",
+        "link": "https://habr.com/ru/companies/ruvds/articles/751756/",
+        "publication_time": "2023-08-02T09:00:01.000Z",
+        "article_text": "\nРис. 1. Разные реал"
+    },
+    {
+        "header": "Учим английский с умом: мотивация и дисциплина",
+        "link": "https://habr.com/ru/articles/751882/",
+        "publication_time": "2023-08-02T08:59:22.000Z",
+        "article_text": "Добрый день, Хабр!Я "
+    },
+    {
+        "header": "Использование PostgreSQL Enum в SQLAlchemy. И проблемы с ним",
+        "link": "https://habr.com/ru/articles/751140/",
+        "publication_time": "2023-08-02T08:30:01.000Z",
+        "article_text": "Начнем с начала. В p"
+    },
+    {
+        "header": "Автостратегии Яндекс Директа в 2023 году: как выбрать, запустить и управлять",
+        "link": "https://habr.com/ru/articles/751940/",
+        "publication_time": "2023-08-02T08:06:41.000Z",
+        "article_text": "Рассказываем, какие "
+    },
+    {
+        "header": "Swipe sidebar — отдельный Typescript сервис и обработка touch событий на Vue",
+        "link": "https://habr.com/ru/articles/751618/",
+        "publication_time": "2023-08-02T08:04:41.000Z",
+        "article_text": "Приветствую, друзья "
+    },
+    {
+        "header": "Делегировать нельзя участвовать. Где запятая? Должен ли продакт участвовать в UX-ах?",
+        "link": "https://habr.com/ru/articles/751936/",
+        "publication_time": "2023-08-02T08:02:46.000Z",
+        "article_text": "Продакт, которого по"
+    },
+    {
+        "header": "Переделываем настенное зеркало во многофункциональное устройство",
+        "link": "https://habr.com/ru/companies/timeweb/articles/751606/",
+        "publication_time": "2023-08-02T08:01:01.000Z",
+        "article_text": "Сегодня я расскажу, "
+    },
+    {
+        "header": "Дотошность и толерантность к хаосу: как понять, что у вас есть склонность к программированию",
+        "link": "https://habr.com/ru/companies/yandex_praktikum/articles/751708/",
+        "publication_time": "2023-08-02T08:00:01.000Z",
+        "article_text": "Привет! Меня зовут Б"
+    }
+]
