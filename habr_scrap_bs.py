@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 
 headers_gen = fake_headers.Headers(browser="firefox", os="win")
 
-response = requests.get("https://habr.com/ru/all/page1", headers=headers_gen.generate())
+response = requests.get("https://habr.com/ru/all", headers=headers_gen.generate())
 html_data = response.text
 
 habr_main = BeautifulSoup(html_data, 'lxml')
