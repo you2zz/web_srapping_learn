@@ -14,10 +14,11 @@ import json
 import requests
 import fake_headers
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 headers_gen = fake_headers.Headers(browser="firefox", os="win")
 
-response = requests.get("https://habr.com/ru/all", headers=headers_gen.generate())
+response = requests.get("https://habr.com/ru/all/page1", headers=headers_gen.generate())
 html_data = response.text
 
 habr_main = BeautifulSoup(html_data, 'lxml')
@@ -33,7 +34,7 @@ for article_tag in article_tags:
 
     header_text = header_tag.text
     link = a_tag['href']
-    link = f'https://habr.com{link}'
+    link = urljoin('https://habr.com', link)
     publication_time = time_tag['datetime']
 
     article_response = requests.get(link, headers=headers_gen.generate())
