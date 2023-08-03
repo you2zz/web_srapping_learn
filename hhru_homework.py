@@ -1,68 +1,83 @@
-# <div data-qa="vacancy-serp__results" id="a11y-main-content"> - лента
-# <div class="serp-item" data-qa="vacancy-serp__vacancy vacancy-serp__vacancy_premium"> - блок с вакансией
-# <h3 data-qa="bloko-header-3" class="bloko-header-section-3"> - заголовок вакансии
-# <a class="serp-item__title" data-qa="serp-item__title" target="_blank" href="https://spb.hh.ru/vacancy/80002041?from=vacancy_search_list&amp;query=python"> - ссылка вакансии
-# <span data-qa="vacancy-serp__vacancy-compensation" class="bloko-header-section-2"> - зарплата вакансии
-# <div class="vacancy-serp-item__meta-info-company"> - компания
-#  <div data-qa="vacancy-serp__vacancy-address" class="bloko-text"> -
-#  <div class="g-user-content"> -
-
+import time
+import re
 import json
 import requests
 import fake_headers
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
 
 headers_gen = fake_headers.Headers(browser="firefox", os="win")
 
-params = {
-    # 'search_field': 'name',
-    # 'search_field': 'company_name',
-    # 'search_field': 'description',
-    'enable_snippets': 'true',
-    'items_on_page':3,
-    'page':2
-}
+page = 0
 
-response = requests.get("https://spb.hh.ru/search/vacancy?text=python&area=1&area=2", params=params, headers=headers_gen.generate())
-html_data = response.text
+item = 20
 
-hh_filter = BeautifulSoup(html_data, 'lxml')
-vacancy_list_tag = hh_filter.find('div', id="a11y-main-content")
-# if vacancy_list_tag != None:
-vacancy_tags = vacancy_list_tag.find_all('div', class_="serp-item")
-# else:
+# params = {
+#     'items_on_page':3,
+#     'page':page
+# }
 
+all_vacancy =[]
 
+vacancy_parsed = {}
 
-vacancy_parsed = []
-for vacancy_tag in vacancy_tags:
-    header_tag = vacancy_tag.find('h3')
-    a_tag = header_tag.find('a')
-    company_tag = vacancy_tag.find('div', class_="vacancy-serp-item__meta-info-company")
-    city_tag = vacancy_tag.find('div', attrs = {'data-qa': 'vacancy-serp__vacancy-address'})
-    salary_tag = vacancy_tag.find('span', attrs={"data-qa": "vacancy-serp__vacancy-compensation"})
-    description_tag = vacancy_tag.find('div', class_="g-user-content")
-
-    header_text = header_tag.text
-    link = a_tag['href']
-    company_text = company_tag.text
-    city_text = city_tag.text.split()[0].strip(',')
-    description_text = description_tag.text
-
-    if salary_tag != None:
-        salary_text = salary_tag.text
+while True:
+    time.sleep(0.5)
+    response = requests.get(f"https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&items_on_page={item}&page={page}", headers=headers_gen.generate())
+    html_data = response.text
+    hh_filter = BeautifulSoup(html_data, 'lxml')
+    vacancy_list_tag = hh_filter.find('div', id="a11y-main-content")
+    if vacancy_list_tag != None:
+        page += 1
+        vacancy_tags = vacancy_list_tag.find_all('div', class_="serp-item")
     else:
-        salary_tag = 'Зарплата не указана'
+        break
+    all_vacancy_on_page = []
 
-    vacancy_parsed.append({
-        'vacancy_name': header_text,
-        'link': link,
-        'salary': salary_text,
-        'company': company_text,
-        'city': city_text,
-        'description': description_text
-    })
+    for vacancy_tag in vacancy_tags:
+        time.sleep(0.33)
+        header_tag = vacancy_tag.find('h3')
+        a_tag = header_tag.find('a')
+        company_tag = vacancy_tag.find('div', class_="vacancy-serp-item__meta-info-company")
+        city_tag = vacancy_tag.find('div', attrs = {'data-qa': 'vacancy-serp__vacancy-address'})
+        salary_tag = vacancy_tag.find('span', attrs={"data-qa": "vacancy-serp__vacancy-compensation"})
 
-with open('vacancy_parsed.json', 'w', encoding='utf-8') as file:
-    json.dump(vacancy_parsed, file, indent=4, ensure_ascii=False)
+        header_text = header_tag.text
+        link = a_tag['href']
+        company_text = company_tag.text
+        city_text = city_tag.text.split()[0].strip(',')
+        id_vacancy = re.search('\d+', link).group()
+
+        description_page = requests.get(link, headers=headers_gen.generate())
+        description = BeautifulSoup(description_page.text, 'lxml')
+        description_body_tag = description.find('div', class_="vacancy-section")
+        description_body_text = description_body_tag.text
+
+        if salary_tag != None:
+            salary_text = salary_tag.text
+        else:
+            salary_text = 'Зарплата не указана'
+
+        all_vacancy_on_page.append(id_vacancy)
+
+        search_django = re.findall('django', description_body_text, re.I)
+        search_flask = re.findall('flask', description_body_text, re.I)
+        if len(search_django) > 0 and len(search_flask):
+            vacancy_parsed.setdefault(id_vacancy, {
+                'vacancy_name': header_text,
+                'link': link,
+                'salary': salary_text,
+                'company': company_text,
+                'city': city_text,
+            })
+
+    with open('vacancy_parsed.json', 'w', encoding='utf-8') as file:
+        json.dump(vacancy_parsed, file, indent=4, ensure_ascii=False)
+
+    all_vacancy.extend((all_vacancy_on_page))
+    print(f'страница {page}')
+    print(f'В цикле обработано {len(all_vacancy_on_page)} вакансий. Всего подошло по условиям вакансий {len(vacancy_parsed)}')
+
+print()
+print()
+print()
+print(f'всего обработано {len(all_vacancy)} вакансий из них подошло по условиям {len(vacancy_parsed)} вакансий')
