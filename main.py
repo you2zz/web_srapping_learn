@@ -16,8 +16,8 @@ if __name__ == '__main__':
     total_get = []
     page = 0
     url = "https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&"
-    how_many_search = 30 # указать после скольки найденных подходящих вакансий остановить парсинг
-    while len(total_get) < how_many_search:
+    how_many_search = 10 # указать после скольки найденных подходящих вакансий остановить парсинг
+    while len(all_vacancy_parsed) < how_many_search:
         time.sleep(0.5)
         vacancy_list_tag, vacancy_tags = get_html(url, 5, page, headers_gen.generate())
         if vacancy_list_tag is not None:
