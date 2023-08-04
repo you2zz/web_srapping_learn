@@ -9,12 +9,12 @@ headers_gen = fake_headers.Headers(browser="firefox", os="win")
 
 page = 0
 
-item = 20
+item = 10
 
-# params = {
-#     'items_on_page':3,
-#     'page':page
-# }
+params = {
+    'items_on_page':20,
+    'page': page
+}
 
 all_vacancy =[]
 
@@ -22,7 +22,11 @@ vacancy_parsed = {}
 
 while True:
     time.sleep(0.5)
-    response = requests.get(f"https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&items_on_page={item}&page={page}", headers=headers_gen.generate())
+    # response = requests.get(f"https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&items_on_page={item}&page={page}", headers=headers_gen.generate())
+    response = requests.get(
+        f"https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&", params=params,
+        headers=headers_gen.generate())
+
     html_data = response.text
     hh_filter = BeautifulSoup(html_data, 'lxml')
     vacancy_list_tag = hh_filter.find('div', id="a11y-main-content")
@@ -61,7 +65,7 @@ while True:
 
         search_django = re.findall('django', description_body_text, re.I)
         search_flask = re.findall('flask', description_body_text, re.I)
-        if len(search_django) > 0 and len(search_flask):
+        if len(search_django) > 0:
             vacancy_parsed.setdefault(id_vacancy, {
                 'vacancy_name': header_text,
                 'link': link,
@@ -70,12 +74,15 @@ while True:
                 'city': city_text,
             })
 
-    with open('vacancy_parsed.json', 'w', encoding='utf-8') as file:
-        json.dump(vacancy_parsed, file, indent=4, ensure_ascii=False)
-
     all_vacancy.extend((all_vacancy_on_page))
     print(f'страница {page}')
-    print(f'В цикле обработано {len(all_vacancy_on_page)} вакансий. Всего подошло по условиям вакансий {len(vacancy_parsed)}')
+    print(
+        f'В цикле обработано {len(all_vacancy_on_page)} вакансий. Всего подошло по условиям вакансий {len(vacancy_parsed)}')
+
+with open('data/vacancy_parsed.json', 'w', encoding='utf-8') as file:
+    json.dump(vacancy_parsed, file, indent=4, ensure_ascii=False)
+
+
 
 print()
 print()
