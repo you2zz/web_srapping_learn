@@ -16,10 +16,10 @@ if __name__ == '__main__':
     total_get = []
     page = 0
     url = "https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&"
-    how_many_search = 10 # указать после скольки найденных подходящих вакансий остановить парсинг
+    how_many_search = 20 # указать после скольки найденных подходящих вакансий остановить парсинг
     while len(all_vacancy_parsed) < how_many_search:
         time.sleep(0.5)
-        vacancy_list_tag, vacancy_tags = get_html(url, 5, page, headers_gen.generate())
+        vacancy_list_tag, vacancy_tags = get_html(url, 10, page, headers_gen.generate())
         if vacancy_list_tag is not None:
             page += 1
         else:
@@ -33,7 +33,7 @@ if __name__ == '__main__':
         print(f'страница {page}')
         print(f'В цикле обработано {len(all_get)} вакансий. Всего подошло по условиям вакансий {len(all_vacancy_parsed)}')
 
-        create_json(all_vacancy_parsed)
+    create_json(all_vacancy_parsed)
 
     print()
     print(f'всего обработано {len(total_get)} вакансий из них подошло по условиям {len(all_vacancy_parsed)} вакансий')
