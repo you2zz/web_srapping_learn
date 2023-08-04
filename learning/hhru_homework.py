@@ -79,7 +79,7 @@ while True:
     print(
         f'В цикле обработано {len(all_vacancy_on_page)} вакансий. Всего подошло по условиям вакансий {len(vacancy_parsed)}')
 
-with open('data/vacancy_parsed.json', 'w', encoding='utf-8') as file:
+with open('../data/vacancy_parsed.json', 'w', encoding='utf-8') as file:
     json.dump(vacancy_parsed, file, indent=4, ensure_ascii=False)
 
 
