@@ -26,7 +26,7 @@ if __name__ == '__main__':
             print('Сбор данных завершен')
             break
 
-        vacancy_parsed, all_get = scrap_pages(vacancy_tags, headers_gen.generate(), '₽') # по умолчанию '₽', для поиска з/п в долларах постаить третьим аргументом '$'
+        vacancy_parsed, all_get = scrap_pages(vacancy_tags, headers_gen.generate(), '₽') # по умолчанию '₽', для поиска з/п в долларах поставить третьим аргументом '$'
         all_vacancy_parsed.update(vacancy_parsed)
         total_get.extend(all_get)
 
