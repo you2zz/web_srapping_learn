@@ -1,4 +1,5 @@
 import time
+import unicodedata
 import re
 from bs4 import BeautifulSoup
 import requests
@@ -16,7 +17,7 @@ def scrap_pages(vacancy_tags, headers, money='₽'):
 
         header_text = header_tag.text
         link = a_tag['href']
-        company_text = company_tag.text
+        company_text = unicodedata.normalize("NFKD", company_tag.text)
         city_text = city_tag.text.split()[0].strip(',')
         id_vacancy = re.search('\d+', link).group()
 
@@ -26,7 +27,7 @@ def scrap_pages(vacancy_tags, headers, money='₽'):
         description_body_text = description_body_tag.text
 
         if salary_tag is not None:
-            salary_text = salary_tag.text
+            salary_text = unicodedata.normalize("NFKD", salary_tag.text)
         else:
             salary_text = 'Доход не указан'
 

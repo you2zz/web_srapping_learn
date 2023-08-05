@@ -1,4 +1,5 @@
 import time
+import unicodedata
 import re
 import json
 import requests
@@ -16,7 +17,7 @@ if __name__ == '__main__':
     total_get = []
     page = 0
     url = "https://spb.hh.ru/search/vacancy?text=python&area=1&area=2&"
-    how_many_search = 20 # указать после скольки найденных подходящих вакансий остановить парсинг
+    how_many_search = 50 # указать после скольки найденных подходящих вакансий остановить парсинг
     while len(all_vacancy_parsed) < how_many_search:
         time.sleep(0.5)
         vacancy_list_tag, vacancy_tags = get_html(url, 10, page, headers_gen.generate())
