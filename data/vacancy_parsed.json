@@ -13,19 +13,19 @@
         "company": "BIGIDEA NETWORK FZ-LLC",
         "city": "Москва"
     },
-    "80506144": {
-        "vacancy_name": "Python-разработчик",
-        "link": "https://spb.hh.ru/vacancy/80506144?from=vacancy_search_list&query=python",
-        "salary": "от 200 000 ₽",
-        "company": "ООО ВижнЛабс (VisionLabs)",
-        "city": "Москва"
-    },
     "83449672": {
         "vacancy_name": "Python разработчик",
         "link": "https://spb.hh.ru/vacancy/83449672?from=vacancy_search_list&query=python",
         "salary": "Доход не указан",
         "company": "СИГМА",
         "city": "Санкт-Петербург"
+    },
+    "84432408": {
+        "vacancy_name": "Middle разработчик Python / Django",
+        "link": "https://spb.hh.ru/vacancy/84432408?from=vacancy_search_list&query=python",
+        "salary": "60 000 – 140 000 ₽",
+        "company": "ООО РА Дельта",
+        "city": "Москва"
     },
     "83207801": {
         "vacancy_name": "Middle python developer",
@@ -34,18 +34,18 @@
         "company": "B.ART",
         "city": "Москва"
     },
-    "83293828": {
-        "vacancy_name": "Разработчик Python (Облачные технологии) удаленно",
-        "link": "https://spb.hh.ru/vacancy/83293828?from=vacancy_search_list&query=python",
-        "salary": "200 000 – 350 000 ₽",
-        "company": "ООО Кадровый центр Президент",
-        "city": "Москва"
-    },
     "83146353": {
         "vacancy_name": "Разработчик Python Middle+ Senior",
         "link": "https://spb.hh.ru/vacancy/83146353?from=vacancy_search_list&query=python",
         "salary": "250 000 – 350 000 ₽",
         "company": "Staffwell",
+        "city": "Москва"
+    },
+    "83293828": {
+        "vacancy_name": "Разработчик Python (Облачные технологии) удаленно",
+        "link": "https://spb.hh.ru/vacancy/83293828?from=vacancy_search_list&query=python",
+        "salary": "200 000 – 350 000 ₽",
+        "company": "ООО Кадровый центр Президент",
         "city": "Москва"
     },
     "83409678": {
@@ -97,13 +97,6 @@
         "company": "Филиал в г. Санкт-Петербург АО Концерн Радиостроения Вега",
         "city": "Санкт-Петербург"
     },
-    "84432408": {
-        "vacancy_name": "Middle разработчик Python / Django",
-        "link": "https://spb.hh.ru/vacancy/84432408?from=vacancy_search_list&query=python",
-        "salary": "60 000 – 140 000 ₽",
-        "company": "ООО РА Дельта",
-        "city": "Москва"
-    },
     "82532098": {
         "vacancy_name": "Python-разработчик",
         "link": "https://spb.hh.ru/vacancy/82532098?from=vacancy_search_list&query=python",
@@ -132,13 +125,6 @@
         "company": "ООО Цифровые привычки",
         "city": "Москва"
     },
-    "84419278": {
-        "vacancy_name": "Python разработчик (Middle)",
-        "link": "https://spb.hh.ru/vacancy/84419278?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Лига Цифровой Экономики",
-        "city": "Москва"
-    },
     "84497299": {
         "vacancy_name": "Backend developer Python (middle/senior)",
         "link": "https://spb.hh.ru/vacancy/84497299?from=vacancy_search_list&query=python",
@@ -146,214 +132,11 @@
         "company": "Ростелеком - Центры обработки данных",
         "city": "Москва"
     },
-    "83781565": {
-        "vacancy_name": "Python developer (Middle)",
-        "link": "https://spb.hh.ru/vacancy/83781565?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Hi, Rockits!",
-        "city": "Москва"
-    },
-    "84242849": {
-        "vacancy_name": "Python Developer",
-        "link": "https://spb.hh.ru/vacancy/84242849?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Сбер для экспертов",
-        "city": "Москва"
-    },
-    "84125839": {
-        "vacancy_name": "Разработчик Python",
-        "link": "https://spb.hh.ru/vacancy/84125839?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "АО ИнфоТеКС",
-        "city": "Санкт-Петербург"
-    },
-    "84174961": {
-        "vacancy_name": "Python Developer (DWH)",
-        "link": "https://spb.hh.ru/vacancy/84174961?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Ostrovok.ru",
-        "city": "Москва"
-    },
-    "83994035": {
-        "vacancy_name": "Преподаватель по программированию (Python)",
-        "link": "https://spb.hh.ru/vacancy/83994035?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ЧПОУ Московский городской открытый колледж",
-        "city": "Москва"
-    },
-    "84047678": {
-        "vacancy_name": "Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/84047678?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО РДП.РУ",
-        "city": "Москва"
-    },
-    "79815763": {
-        "vacancy_name": "Python Developer",
-        "link": "https://spb.hh.ru/vacancy/79815763?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "МойОфис",
-        "city": "Санкт-Петербург"
-    },
-    "83953135": {
-        "vacancy_name": "Strong junior / Middle Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/83953135?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО НПФ ФИТО",
-        "city": "Москва"
-    },
-    "83970855": {
-        "vacancy_name": "Middle Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/83970855?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Rambler&Co",
-        "city": "Москва"
-    },
-    "80122527": {
-        "vacancy_name": "Python-разработчик",
-        "link": "https://spb.hh.ru/vacancy/80122527?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Сбер. IT",
-        "city": "Москва"
-    },
-    "83927580": {
-        "vacancy_name": "Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/83927580?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "TerraLink",
-        "city": "Москва"
-    },
-    "84118400": {
-        "vacancy_name": "Backend Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/84118400?from=vacancy_search_list&query=python",
-        "salary": "от 80 000 ₽",
-        "company": "ИП Сычев Павел Владимирович",
-        "city": "Санкт-Петербург"
-    },
-    "83924839": {
-        "vacancy_name": "Старший разработчик Python",
-        "link": "https://spb.hh.ru/vacancy/83924839?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО «РУСАГРО», Мясное бизнес-направление",
-        "city": "Москва"
-    },
-    "83836028": {
-        "vacancy_name": "Разработчик Python Flask/Django",
-        "link": "https://spb.hh.ru/vacancy/83836028?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Иннотех, Группа компаний",
-        "city": "Москва"
-    },
-    "83675296": {
-        "vacancy_name": "Senior Python разработчик (удаленно)",
-        "link": "https://spb.hh.ru/vacancy/83675296?from=vacancy_search_list&query=python",
-        "salary": "до 300 000 ₽",
-        "company": "ООО АйТиКвик",
-        "city": "Москва"
-    },
-    "70052938": {
-        "vacancy_name": "Разработчик Python (ALD)",
-        "link": "https://spb.hh.ru/vacancy/70052938?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Группа компаний Астра",
-        "city": "Москва"
-    },
-    "83780463": {
-        "vacancy_name": "Middle Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/83780463?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Oil and Gas Production Tools",
-        "city": "Санкт-Петербург"
-    },
-    "83559025": {
-        "vacancy_name": "Python разработчик (в офис)",
-        "link": "https://spb.hh.ru/vacancy/83559025?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО Энигма Групп",
-        "city": "Москва"
-    },
-    "83453900": {
-        "vacancy_name": "Python developer",
-        "link": "https://spb.hh.ru/vacancy/83453900?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО Аренадата Софтвер",
-        "city": "Москва"
-    },
-    "76908070": {
-        "vacancy_name": "Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/76908070?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Ростелеком - Центры обработки данных",
-        "city": "Москва"
-    },
-    "76143760": {
-        "vacancy_name": "Python-разработчик",
-        "link": "https://spb.hh.ru/vacancy/76143760?from=vacancy_search_list&query=python",
+    "84419278": {
+        "vacancy_name": "Python разработчик (Middle)",
+        "link": "https://spb.hh.ru/vacancy/84419278?from=vacancy_search_list&query=python",
         "salary": "Доход не указан",
         "company": "Лига Цифровой Экономики",
-        "city": "Москва"
-    },
-    "83287956": {
-        "vacancy_name": "Python-разработчик",
-        "link": "https://spb.hh.ru/vacancy/83287956?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Программный Продукт, ИТ-компания",
-        "city": "Санкт-Петербург"
-    },
-    "83226584": {
-        "vacancy_name": "Разработчик Python",
-        "link": "https://spb.hh.ru/vacancy/83226584?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО SolidLab",
-        "city": "Москва"
-    },
-    "83157584": {
-        "vacancy_name": "Python-разработчик (удаленно)",
-        "link": "https://spb.hh.ru/vacancy/83157584?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ООО Центр финансового управления",
-        "city": "Москва"
-    },
-    "84434346": {
-        "vacancy_name": "Разработчик Python",
-        "link": "https://spb.hh.ru/vacancy/84434346?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "ОТП Банк, АО (OTP bank)",
-        "city": "Москва"
-    },
-    "84138273": {
-        "vacancy_name": "Python разработчик",
-        "link": "https://spb.hh.ru/vacancy/84138273?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "The Skolkovo Institute of Science and Technology",
-        "city": "Москва"
-    },
-    "84061130": {
-        "vacancy_name": "Разработчик Python",
-        "link": "https://spb.hh.ru/vacancy/84061130?from=vacancy_search_list&query=python",
-        "salary": "от 200 000 ₽",
-        "company": "АО Лотереи Москвы",
-        "city": "Москва"
-    },
-    "79584451": {
-        "vacancy_name": "Программист Python (middle)",
-        "link": "https://spb.hh.ru/vacancy/79584451?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Центр Методического Обеспечения Оптимизации Процессов Государственного Управления в Московской области",
-        "city": "Москва"
-    },
-    "83967414": {
-        "vacancy_name": "Teamlead backend (Python)",
-        "link": "https://spb.hh.ru/vacancy/83967414?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Триафлай",
-        "city": "Москва"
-    },
-    "83948387": {
-        "vacancy_name": "Python developer (middle/middle+)",
-        "link": "https://spb.hh.ru/vacancy/83948387?from=vacancy_search_list&query=python",
-        "salary": "Доход не указан",
-        "company": "Леруа Мерлен. Центральный офис",
         "city": "Москва"
     }
 }

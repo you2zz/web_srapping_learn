@@ -9,8 +9,8 @@ from bs4 import BeautifulSoup
 class HhScrap:
 
     def __init__(self, url, item, headers, money='₽', how_many_search=100):
-        self.url = url,
-        self.item = item,
+        self.url = url
+        self.item = item
         self.headers = headers
         self.money = money
         self.how_many_search = how_many_search
@@ -104,3 +104,4 @@ class HhScrap:
     def create_json(self):
         with open('data/vacancy_parsed.json', 'w', encoding='utf-8') as file:
             json.dump(self.get_all_vacancy(), file, indent=4, ensure_ascii=False)
+        print('Файл "vacancy_parsed.json" успешно создан')
