@@ -3,18 +3,17 @@ import unicodedata
 import re
 import json
 import requests
-import fake_headers
 from bs4 import BeautifulSoup
-from application.get_html import get_html
-from application.scrap_pages import scrap_pages
-from application.create_json import create_json
+
 
 class HhScrap:
 
-    def __init__(self, url, item, headers, money='₽'):
+    def __init__(self, url, item, headers, money='₽', how_many_search=100):
         self.url = url,
         self.item = item,
         self.headers = headers
+        self.money = money
+        self.how_many_search = how_many_search
 
     def get_html(self, page):
         params = {
@@ -78,3 +77,30 @@ class HhScrap:
                     })
             all_get.append(id_vacancy)
         return vacancy_parsed, all_get
+
+    def get_all_vacancy(self):
+        all_vacancy_parsed = {}
+        total_get = []
+        page = 0
+        while len(all_vacancy_parsed) < self.how_many_search:
+            time.sleep(0.5)
+            vacancy_list_tag, vacancy_tags = self.get_html(page)
+            if vacancy_list_tag is not None:
+                page += 1
+            else:
+                print('Собраны все существующие вакансии')
+                break
+            vacancy_parsed, all_get = self.scrap_pages(vacancy_tags)
+            all_vacancy_parsed.update(vacancy_parsed)
+            total_get.extend(all_get)
+            print(f'страница {page}')
+            print(
+                f'В цикле обработано {len(all_get)} вакансий. Всего подошло по условиям вакансий {len(all_vacancy_parsed)}')
+        print('Сбор данных завершен')
+        print(
+            f'всего обработано {len(total_get)} вакансий из них подошло по условиям {len(all_vacancy_parsed)} вакансий')
+        return all_vacancy_parsed
+
+    def create_json(self):
+        with open('data/vacancy_parsed.json', 'w', encoding='utf-8') as file:
+            json.dump(self.get_all_vacancy(), file, indent=4, ensure_ascii=False)
