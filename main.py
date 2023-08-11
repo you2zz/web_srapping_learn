@@ -1,7 +1,12 @@
+from functools import wraps
+import time
+import datetime
+import os
 import time
 import unicodedata
 import re
 import json
+from functools import wraps
 import requests
 import fake_headers
 from bs4 import BeautifulSoup
@@ -14,7 +19,7 @@ if __name__ == '__main__':
     item = 5  # по скольку вакансий запрашивать и обрабатывать в цикле
     headers = headers_gen.generate()
     money = '₽'  # по умолчанию '₽' выдаются результаты и в рублях и в другой валюте, для поиска з/п только в долларах поставить '$'
-    how_many_search = 30  # указать после скольки найденных подходящих вакансий остановить парсинг
+    how_many_search = 3  # указать после скольки найденных подходящих вакансий остановить парсинг
 
     hh_scrap = HhScrap(url, item, headers, money, how_many_search)
     hh_scrap.create_json()

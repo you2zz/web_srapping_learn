@@ -1,10 +1,13 @@
 import time
+import datetime
+import os
 import unicodedata
 import re
 import json
+from functools import wraps
 import requests
 from bs4 import BeautifulSoup
-
+from application.decorators_ws import logger
 
 class HhScrap:
 
@@ -15,12 +18,18 @@ class HhScrap:
         self.money = money
         self.how_many_search = how_many_search
 
+    @logger(path='data/requests.log')
+    def requests_conn(self, url, params=None):
+        response = requests.get(url=url, params=params, headers=self.headers)
+        return response
+
     def get_html(self, page):
         params = {
             'items_on_page': self.item,
             'page': page
         }
-        response = requests.get(url=self.url, params=params, headers=self.headers)
+        # response = requests.get(url=self.url, params=params, headers=self.headers)
+        response = self.requests_conn(self.url, params=params)
         html_data = response.text
         hh_filter = BeautifulSoup(html_data, 'lxml')
         vacancy_list_tag = hh_filter.find('div', id="a11y-main-content")
@@ -44,7 +53,8 @@ class HhScrap:
             city_text = city_tag.text.split()[0].strip(',')
             id_vacancy = re.search('\d+', link).group()
 
-            description_page = requests.get(link, headers=self.headers)
+            # description_page = requests.get(link, headers=self.headers)
+            description_page = self.requests_conn(link)
             description = BeautifulSoup(description_page.text, 'lxml')
             description_body_tag = description.find('div', class_="vacancy-section")
             description_body_text = description_body_tag.text
