@@ -23,9 +23,8 @@ def log_clean(path):
     def __log_clean(old_function):
         @wraps(old_function)
         def new_function(*args, **kwargs):
-            f = open(path, 'w', encoding='utf-8')
-            f.write(f'\ncall time: {datetime.datetime.now()}; function name: {new_function.__name__}. Файл {path} очищен. Ведется запись текущей сессии.')
-            f.close()
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(f'\ncall time: {datetime.datetime.now()}; function name: {new_function.__name__}. Файл {path} очищен. Ведется запись текущей сессии.')
             result = old_function(*args, **kwargs)
             return result
 
