@@ -7,7 +7,7 @@ import json
 from functools import wraps
 import requests
 from bs4 import BeautifulSoup
-from application.decorators_ws import logger
+from application.decorators_ws import logger, with_attempts
 
 class HhScrap:
 
@@ -18,10 +18,11 @@ class HhScrap:
         self.money = money
         self.how_many_search = how_many_search
 
+    @with_attempts(max_attempts=5, timeout=0.5)
     @logger(path='data/requests.log')
     def requests_conn(self, url, params=None):
         response = requests.get(url=url, params=params, headers=self.headers)
-        return response
+        return response, response.status_code, url
 
     def get_html(self, page):
         params = {
@@ -29,7 +30,7 @@ class HhScrap:
             'page': page
         }
         # response = requests.get(url=self.url, params=params, headers=self.headers)
-        response = self.requests_conn(self.url, params=params)
+        response = self.requests_conn(self.url, params=params)[0]
         html_data = response.text
         hh_filter = BeautifulSoup(html_data, 'lxml')
         vacancy_list_tag = hh_filter.find('div', id="a11y-main-content")
@@ -54,7 +55,7 @@ class HhScrap:
             id_vacancy = re.search('\d+', link).group()
 
             # description_page = requests.get(link, headers=self.headers)
-            description_page = self.requests_conn(link)
+            description_page = self.requests_conn(link)[0]
             description = BeautifulSoup(description_page.text, 'lxml')
             description_body_tag = description.find('div', class_="vacancy-section")
             description_body_text = description_body_tag.text
