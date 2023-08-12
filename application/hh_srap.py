@@ -25,7 +25,7 @@ class HhScrap:
         response = requests.get(url=url, params=params, headers=self.headers)
         return response, response.status_code, url
 
-    @with_attempts_data(max_attempts=5, timeout=0.5)
+    @with_attempts_data(path='data/get_data.log', max_attempts=5, timeout=0.5)
     def get_html(self, page):
         params = {
             'items_on_page': self.item,
@@ -42,7 +42,7 @@ class HhScrap:
             vacancy_tags = None
         return vacancy_tags, f'Страница с перечнем вакансий № {page + 1}'
 
-    @with_attempts_data(max_attempts=5, timeout=0.5)
+    @with_attempts_data(path='data/get_data.log', max_attempts=5, timeout=0.5)
     def get_vacancy_description(self, url):
         description_page = self.requests_conn(url)[0]
         description = BeautifulSoup(description_page.text, 'lxml')
@@ -129,6 +129,7 @@ class HhScrap:
         return all_vacancy_parsed, total_get
 
     @log_clean(path='data/requests.log')
+    @log_clean(path='data/get_data.log')
     def create_json(self):
         with open('data/vacancy_parsed.json', 'w', encoding='utf-8') as file:
             dict_vacancy, total_get = self.get_all_vacancy()

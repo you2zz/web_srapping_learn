@@ -23,8 +23,8 @@ def log_clean(path):
     def __log_clean(old_function):
         @wraps(old_function)
         def new_function(*args, **kwargs):
-            f = open(path, 'w')
-            f.write(f'\ncall time: {datetime.datetime.now()}; function name: {new_function.__name__}')
+            f = open(path, 'w', encoding='utf-8')
+            f.write(f'\ncall time: {datetime.datetime.now()}; function name: {new_function.__name__}. Файл {path} очищен. Ведется запись текущей сессии.')
             f.close()
             result = old_function(*args, **kwargs)
             return result
@@ -53,17 +53,19 @@ def with_attempts(max_attempts=3, timeout=0.1):
     return _with_attempts
 
 
-def with_attempts_data(max_attempts=3, timeout=0.1):
+def with_attempts_data(path, max_attempts=3, timeout=0.1):
     def _with_attempts_data(any_function):
         @wraps(any_function)
         def new_function(*args, **kwargs):
             for i in range(1, max_attempts + 1):
                 result = any_function(*args, **kwargs)
                 if result[0] is not None:
-                    print(f'Получено описание вакансии со страницы: {result[1]}')
+                    with open(path, 'a', encoding='utf-8') as f_log:
+                        f_log.write(f'\ncall time: {datetime.datetime.now()}; function name: {new_function.__name__}; Получено описание вакансии со страницы: {result[1]}')
                     break
                 else:
-                    print(f'Не получены данные со страницы: {result[1]}')
+                    with open(path, 'a', encoding='utf-8') as f_log:
+                        f_log.write(f'\ncall time: {datetime.datetime.now()}; function name: {new_function.__name__}; Не получены данные со страницы: {result[1]}')
                     time.sleep(timeout)
             return result
 
